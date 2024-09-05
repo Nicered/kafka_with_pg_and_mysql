@@ -1,0 +1,17 @@
+{
+    "name": "mysql-sink-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",
+      "connection.url": "jdbc:mysql://test-mysql-db:3306/test",
+      "connection.username": "root",
+      "connection.password": "local",
+      "topics.regex": "post_server.*",
+      "auto.create": "true",  
+      "auto.evolve": "true",
+      "insert.mode": "upsert",
+      "delete.enabled": "true",      
+      "primary.key.mode": "record_key",      
+      "schema.evolution": "basic",
+      "database.time_zone": "UTC"            
+    }
+}
